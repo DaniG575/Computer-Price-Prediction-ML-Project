@@ -14,10 +14,15 @@ If the dataset also contained the year of purchase it will also help the dataset
 Also, simple algorithms like simple regression or random forest are just basic algorithms and even if they have huge datasets with many dimensions, they could still lack accuracy.
 
 ### Try it out
-The code is split between a file used to clean the data, train the model and evaluate the model which is not needed to run the application and the app file where all the necessary components to run the application are. \n
-1- copy the repository or fork the repo \n
-2- make sure you have Python 3.12 installed and install all the requirements in requirements.txt \n
-3- run the file ServerApp.py (App --> Server --> ServerApp.py) \n
-4- open the app.html file (App --> Client --> app.html) \n
+The code is split between a file used to clean the data, train the model and evaluate the model which is not needed to run the application and the app file where all the necessary components to run the application are. 
+
+1- copy the repository or fork the repo 
+
+2- make sure you have Python 3.12 installed and install all the requirements in requirements.txt 
+
+3- run the file ServerApp.py (App --> Server --> ServerApp.py) 
+
+4- open the app.html file (App --> Client --> app.html) 
+
 OR you can try the web version using this link:
 
