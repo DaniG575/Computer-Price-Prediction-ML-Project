@@ -11,7 +11,7 @@ from sklearn.ensemble import RandomForestRegressor
 from sklearn.preprocessing import StandardScaler
 import pickle
 
-df = pd.read_csv("clean_prices.csv")
+df = pd.read_csv("./ModelCreation/InfData/clean_prices.csv")
 x = df.drop("Price_euros", axis="columns")
 y = df.Price_euros
 xtrain,xeval,ytrain,yeval = train_test_split(x,y,test_size=0.2,random_state=10)
@@ -68,10 +68,10 @@ print(EvalModelsParams(scaled,y,5))
 
 bestModel = RandomForestRegressor(n_estimators=100)
 bestModel.fit(x,y)
-with open('model_pickle','wb') as RegModel:
+with open("./ModelCreation/Models/model_pickle",'wb') as RegModel:
     pickle.dump(bestModel,RegModel)
 
 RegressionModel = lm.LinearRegression()
 RegressionModel.fit(x,y)
-with open('model_pickle','wb') as RegModel:
+with open("./ModelCreation/Models/model_pickle",'wb') as RegModel:
     pickle.dump(RegressionModel,RegModel)

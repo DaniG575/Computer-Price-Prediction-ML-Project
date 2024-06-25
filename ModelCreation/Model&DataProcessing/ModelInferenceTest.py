@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import json
 
-df = pd.read_csv("clean_prices.csv")
+df = pd.read_csv("./ModelCreation/InfData/clean_prices.csv")
 df1 = df.drop("Price_euros", axis="columns")
 features = df1.columns.tolist()
 with open('RFModel','rb') as file:
@@ -33,5 +33,5 @@ def Predict(Inches, Cpu, Ram, Weight, HR, VR, SSD, HDD, graphics, OS, gentop):
     return bestPredict[0], avgPredict[0]
 
 print(Predict(13.3,2.3,32.0,1.37,2560.0,1600.0,128.0,0,"Intel Iris","macOS", 0))
-with open("features.json","w") as j:
+with open("./ModelCreation/InfData/features.json","w") as j:
     j.write(json.dumps(features))

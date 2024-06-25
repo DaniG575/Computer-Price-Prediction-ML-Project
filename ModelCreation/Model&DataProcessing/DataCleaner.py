@@ -46,7 +46,7 @@ def classify_gpu(gpu_string):
         return 'Other'
 
 
-df = pd.read_csv("ModelCreation/Model&DataProcessing/laptop_price.csv", encoding='ISO-8859-1')
+df = pd.read_csv("./ModelCreation/Model&DataProcessing/laptop_price.csv", encoding='ISO-8859-1')
 df1 = df.drop(["laptop_ID","Company","Product","TypeName"], axis="columns")
 print(df1.info())
 print(df1.ScreenResolution.unique())
@@ -84,4 +84,4 @@ print(df1[df1.Price_euros > 4000])
 df1["TopForGen"] = df1.Price_euros.apply(lambda x: 1 if x>4000 else 0)
 print(df1.head())
 print(df1[df1.Price_euros > 4000])
-df1.to_csv("clean_prices.csv", index=False)
+df1.to_csv("./ModelCreation/InfData/clean_prices.csv", index=False)
