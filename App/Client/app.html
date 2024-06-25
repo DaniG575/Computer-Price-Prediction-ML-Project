@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Price Prediction</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <h1>Computer Price Prediction</h1>
+    <form id="price-prediction-form">
+        <div>
+            <label for="ram">RAM (GB):</label>
+            <input type="number" id="ram" name="ram" min="1" max="64" required>
+        </div>
+        <div>
+            <label for="cpu">CPU (GHz):</label>
+            <input type="number" step="0.1" id="cpu-ghz" name="cpu" min="0.5" max="5.0" required>
+        </div>
+        <div>
+            <label for="graphics">Graphics Card:</label>
+            <select id="graphics-card" name="graphics" required>
+                <option value="Nvidia Geforce">NVIDIA GeForce</option>
+                <option value="Nvidia non-Geforce">NVIDIA non-GeForce</option>
+                <option value="Intel Iris">Intel Iris (integrated GPU)</option>
+                <option value="Intel Graphics">Intel Graphics</option>
+                <option value="amd">AMD</option>
+            </select>
+        </div>
+        <div>
+            <label for="ssd">SSD Memory (GB):</label>
+            <input type="number" step="0.1" id="ssd-memory" name="ssd" required>
+        </div>
+        <div>
+            <label for="hdd">HDD Memory (GB):</label>
+            <input type="number" step="0.1" id="hdd-memory" name="hdd" required>
+        </div>
+        <div>
+            <label for="resolution">Resolution:</label>
+            <select id="resolution" name="resolution" required>
+                <option value="1920x1080">1920x1080</option>
+                <option value="2560x1440">2560x1440</option>
+                <option value="3840x2160">3840x2160</option>
+                <option value="1366x768">1366x768</option>
+                <option value="1440x900">1440x900</option>
+            </select>
+        </div>
+        <div>
+            <label for="os">Operating System:</label>
+            <select id="os" name="os" required>
+                <option value="Chrome OS">Chrome OS</option>
+                <option value="Linux">Linux</option>
+                <option value="Mac OS X">Mac OS X</option>
+                <option value="macOS">Mac OS</option>
+                <option value="Windows 10">Windows 10</option>
+                <option value="Windows 10 S">Windows 10 S</option>
+                <option value="Windows 7">Windows 7</option>
+                <option value="android">Android</option>
+                <option value="No OS">No OS</option>
+            </select>
+        </div>
+        <div>
+            <label for="weight">Weight (kg):</label>
+            <input type="number" step="0.1" id="weight" name="weight" required>
+        </div>
+        <div>
+            <label for="inches">Screen Size (inches):</label>
+            <input type="number" step="0.1" id="screen-size" name="inches" required>
+        </div>
+        <div>
+            <label for="tg">Top Generation:</label>
+            <input type="checkbox" id="top-generation" name="tg">
+        </div>
+        <div>
+            <button type="submit">Predict Price</button>
+        </div>
+    </form>
+    <div id="predicted-price">
+        <h2>Predicted Price:</h2>
+        <p id="price"></p>
+    </div>
+	<script src="app.js"></script>
+</body>
+</html>
+
